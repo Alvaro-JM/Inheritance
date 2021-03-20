@@ -1,22 +1,27 @@
+package pacalcompany.formas_herencia;
+
 /**
- * This is threeDimensionalShape class which points towards the other classes in hierarchy.
- * it gives surface area and volume to those classes.
- * 
- * @author Pratik Patel
- * @version 1 Date: 04/27/2014
+ * Clase abstracta para figuras de tres dimensiones. Es la clase padre de las
+ * que heredan las figuras de tres dimensiones. Implementa el área de la
+ * superficie y el volumen de la figura..
+ *
+ * @author Pratik Patel - Álvaro Jiménez
+ * @version 2 Date: 22/03/2021
  */
-abstract class ThreeDimensionalShape extends Shape{
- 
+public abstract class ThreeDimensionalShape extends Shape {
+    
     /**
-     * This method gets the surface area.
-     * 
+     * Obtiene el área de la superficie.
+     *
+     * @return el área de la superficie.
      */
     abstract public double getSurfaceArea();
-    
+
     /**
-     * This method gets the volume.
-     * 
+     * Obtiene el volumen de la figura.
+     *
+     * @return el volumen de la figura.
      */
     abstract public double getVolume();
-    
+
 }

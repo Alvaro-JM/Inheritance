@@ -1,28 +1,32 @@
+package pacalcompany.formas_herencia;
 
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
 /**
- * This class shows the hierarchy of mathematical shapes that we are going to create by inheritance. 
- * 
- * @author Pratik Patel
- * @version 1 Date: 04/27/2014
+ * Clase Principal. Muestra la funcionalidad de la jerarquía de las clases de
+ * las figuras y sus métodos.
+ *
+ * @author Pratik Patel - Álvaro Jiménez
+ * @version 2 Date: 22/03/2021
  */
 public class Project4 {
 
-    public static void main(String args[]) {
+    /**
+     * Main. Recibe como argumento el archivo dónde se imprimirá la salida.
+     *
+     * @param args documento en el que se imprime la salida.
+     */
+    public static void main(String[] args) {
         try {
             PrintWriter out = new PrintWriter(new FileWriter(args[0]));
             ArrayList<Shape> myShapes = new ArrayList<Shape>(30);
-            
 
             Point pt1 = new Point(1, 1);
             Point pt2 = new Point(5, 8);
             Point pt3;
             Point pt4 = new Point();
-            
-            
 
             Triangle triangle_1 = new Triangle(pt1, pt2, new Point(10, 4));
             pt1.setX(2);
@@ -50,9 +54,10 @@ public class Project4 {
             r1 = new Rectangle(10, 3);
             r2 = new Rectangle(20, 4);
             r1.setWidth(3);
-            r2.setHeight(10); /*set height use */
+            r2.setLength(10);
+            /*set height use */
             r3 = new Rectangle(r2);
-            r3.setHeight(100);
+            r3.setLength(100);
             myShapes.add(r1);
             myShapes.add(r2);
             myShapes.add(r3);
@@ -85,7 +90,6 @@ public class Project4 {
             myShapes.add(cy2);
             myShapes.add(cy3);
 
-
             Cone cone_1, cone_2, cone_3;
             cone_1 = new Cone(4, 10);
             cone_2 = new Cone(7, 12);
@@ -110,7 +114,6 @@ public class Project4 {
             System.exit(0);
         }  // end of catch
 
-
-
     }
+
 }

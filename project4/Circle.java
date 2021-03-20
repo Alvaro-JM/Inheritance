@@ -1,26 +1,36 @@
+package pacalcompany.formas_herencia;
+
 import java.io.PrintWriter;
+
 /**
- * This is a circle class which is representing radius and center of circle. 
- * The center is a Point object.
- * 
- * @author  Pratik Patel
- * @version 1 Date: 04/27/2014
+ * Clase para figura círculo. Clase para crear figura círculo a partir del
+ * centro (de clase Punto) y el radio.
+ *
+ * @author Pratik Patel - Álvaro Jiménez
+ * @version 2 Date: 22/03/2021
  */
-public class Circle  extends TwoDimensionalShape{
-    //instance variables radius and center
-    private double radius ;
+public class Circle extends TwoDimensionalShape {
+
+    private double radius;
     private Point center;
 
     /**
-     * The default constructor which takes doubles and point initializes the radius and center. 
+     * Constructor parametrizado. Recibe un centro y un radio para crear un
+     * círculo.
+     *
+     * @param center centro del círculo.
+     * @param radius radio del círculo.
      */
-    public Circle(Point center,double radius) {
+    public Circle(Point center, double radius) {
         this.radius = radius;
         this.center = center;
     }
-    
+
     /**
-     * This constructor is same as define above. 
+     * Constructor clon. Recibe un círculo para crear un círculo con los mismos
+     * valores.
+     *
+     * @param circle circulo.
      */
     public Circle(Circle circle) {
         this.radius = circle.radius;
@@ -28,51 +38,45 @@ public class Circle  extends TwoDimensionalShape{
     }
 
     /**
-     * It gets the value of radius.
-     * @return the value of radius.
+     * Obtiene el valor del radio.
+     *
+     * @return el valor del radio.
      */
     public double getRadius() {
         return radius;
     }
 
     /**
-     * It sets the value of radius.
+     * Establece el valor del radio.
+     *
+     * @param radius radio del círculo.
      */
     public void setRadius(double radius) {
         this.radius = radius;
     }
 
     /**
-     * It gets the value of center.
-     * @return the value of center.
+     * Obtiene el valor del centro.
+     *
+     * @return el valor del centro.
      */
     public Point getCenter() {
         return center;
     }
-    
+
     /**
-     * It sets the value of center.
+     * Establece el valor del centro.
+     *
+     * @param center centro del círculo.
      */
     public void setCenter(Point center) {
         this.center = center;
     }
 
     /**
-     * This is a printwriteout overridden method which prints the circle object.
-     */
-    @Override
-    public void print(PrintWriter out) {
-        super.print(out);
-        out.write("\n Cirle: "+ "\r\n");
-        out.print("\n Center = " + this.center.getX() + " " + this.center.getY()+ "\r\n");
-        out.write("\n Area = " + this.getArea()+ "\r\n");;
-        out.write("\n Perimeter = " + this.getPerimeter()+ "\r\n");
-        out.write("\n Radius = " + this.getRadius()+ "\r\n");;
-        out.write("\n\n\n");
-    }
-
-    /**
-     * This is an overridden method which gets the area.
+     * Obtiene el valor del área.
+     *
+     * @return el valor del área
      */
     @Override
     public double getArea() {
@@ -80,14 +84,29 @@ public class Circle  extends TwoDimensionalShape{
     }
 
     /**
-     * This is an overridden method which gets the radius.
+     * Obtiene el valor del perímetro.
+     *
+     * @return el valor del perímetro.
      */
     @Override
     public double getPerimeter() {
         return 2 * Math.PI * this.radius;
     }
 
+    /**
+     * Imprime los atributos y valores del círculo. Imprime los atributos y
+     * resultados de los metodos del objeto en un archivo dado como parámetro.
+     *
+     * @param out salida del método.
+     */
+    @Override
+    public void print(PrintWriter out) {
+        out.write("\n Cirle: " + "\r\n");
+        out.print("\n Center = " + this.center.getX() + " " + this.center.getY() + "\r\n");
+        out.write("\n Area = " + this.getArea() + "\r\n");;
+        out.write("\n Perimeter = " + this.getPerimeter() + "\r\n");
+        out.write("\n Radius = " + this.getRadius() + "\r\n");;
+        out.write("\n\n\n");
+    }
+
 }
-
-    
-

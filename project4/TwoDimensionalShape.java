@@ -1,22 +1,26 @@
+package pacalcompany.formas_herencia;
+
 /**
- * This is twoDimensionalShape class which points towards the other classes in hierarchy.
- * it gives perimeter and area of the each shapes.
- * 
- * @author Pratik Patel
- * @version 1 Date: 04/27/2014
+ * Clase abstracta para figuras de dos dimensiones. Es la clase padre de las que
+ * heredan las figuras de dos dimensiones. Implementa el perímetro y el área.
+ *
+ * @author Pratik Patel - Álvaro Jiménez
+ * @version 2 Date: 22/03/2021
  */
-abstract  class TwoDimensionalShape extends Shape{
-  
-   /**
-     * This method gets the perimeter.
-     * 
-     */ 
-  abstract public double getPerimeter();
-    
-   /**
-     * This method gets the area.
-     * 
+public abstract class TwoDimensionalShape extends Shape {
+
+    /**
+     * Obtiene el perímetro.
+     *
+     * @return el valor del perímetro.
      */
-   abstract public double getArea();
+    abstract public double getPerimeter();
+
+    /**
+     * Obtiene el área.
+     *
+     * @return el valor del área
+     */
+    abstract public double getArea();
 
 }

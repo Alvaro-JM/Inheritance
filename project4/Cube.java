@@ -1,50 +1,59 @@
+package pacalcompany.formas_herencia;
+
 import java.io.PrintWriter;
 
 /**
- * This is a cube class which is a ThreeDimensionalShape 
- * it is represented by its side length.
- * 
- * @author Pratik Patel
- * @version 1  Date: 04/27/2014
+ * Clase para figura cubo. Clase para crear figura cubo a partir del largo del
+ * lado.
+ *
+ * @author Pratik Patel - Álvaro Jiménez.
+ * @version 2 Date: 22/03/2021
  */
- class Cube extends ThreeDimensionalShape{
-    //instance variable length which is double.
-     double length;
+public class Cube extends ThreeDimensionalShape {
 
-    public Cube() {
-    }
+    double length;
 
     /**
-     * The default constructor which defines a length. 
+     * Constructor parametrizado. Recibe el largo del lado para crear un cubo.
+     *
+     * @param length largo del lado del cubo.
      */
     public Cube(double length) {
         this.length = length;
     }
-     
+
     /**
-     * This constructor is pointing to the above constructor. 
+     * Constructor clon. Recibe un cubo para crear un cubo con los mismos
+     * valores.
+     *
+     * @param cube cubo.
      */
     public Cube(Cube cube) {
-         this.length = cube.length;
+        this.length = cube.length;
     }
 
     /**
-     * It gets the value of length.
-     * @return the value of length.
+     * Obtiene el valor del largo.
+     *
+     * @return el valor del largo del lado.
      */
     public double getLength() {
         return length;
     }
 
     /**
-     * It sets the value of length.
+     * Establece el valor del largo del lado.
+     *
+     * @param length largo del lado.
      */
     public void setSideLength(double length) {
         this.length = length;
     }
 
     /**
-     * This is an overridden method which gets the surface area.
+     * Obtiene el valor del área superficial.
+     *
+     * @return el valor del área superficial.
      */
     @Override
     public double getSurfaceArea() {
@@ -52,7 +61,9 @@ import java.io.PrintWriter;
     }
 
     /**
-     * This is an overridden method which gets the volume.
+     * Obtiene el valor del volumen.
+     *
+     * @return el valor del volumen.
      */
     @Override
     public double getVolume() {
@@ -60,15 +71,17 @@ import java.io.PrintWriter;
     }
 
     /**
-     * This is a printwriteout overridden method which prints the Cube object.
+     * Imprime los atributos y valores del cubo. Imprime los atributos y
+     * resultados de los metodos del objeto en un archivo dado como parámetro.
+     *
+     * @param out salida del método.
      */
     @Override
     public void print(PrintWriter out) {
-        super.print(out);
-        out.write("\n Side  Length = " + this.getLength()+ "\r\n");
-        out.write("\n Surface  Area = " + this.getSurfaceArea()+ "\r\n");
-        out.write("\n Volume = " + this.getVolume()+ "\r\n");;
-        out.write("\n\n\n"); 
+        out.write("\n Side  Length = " + this.getLength() + "\r\n");
+        out.write("\n Surface  Area = " + this.getSurfaceArea() + "\r\n");
+        out.write("\n Volume = " + this.getVolume() + "\r\n");;
+        out.write("\n\n\n");
     }
-     
+
 }

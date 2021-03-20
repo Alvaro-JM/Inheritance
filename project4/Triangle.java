@@ -1,30 +1,39 @@
+package pacalcompany.formas_herencia;
+
 import java.io.PrintWriter;
 
 /**
- * This is a Triangle class which is TwoDimention shape.
- * It represents three corner points which are point objects.
- * 
- * @author Pratik Patel
- * @version 1  Date: 04/27/2014
+ * Clase para figura triángulo. Clase para crear figura triángulo a partir de
+ * tres puntos (de clase Punto).
+ *
+ * @author Pratik Patel - Álvaro Jiménez
+ * @version 2 Date: 22/03/2021
  */
-class Triangle extends TwoDimensionalShape {
-    //instance variables point1, point2 and point3
+public class Triangle extends TwoDimensionalShape {
+
     private Point point1, point2, point3;
 
-    public Triangle() {
-    }
- 
     /**
-     * The default constructor which takes points and define them. 
+     * Constructor parametrizado. Recibe tres puntos para crear un triángulo.
+     *
+     * @param pt1 punto 1.
+     * @param pt2 punto 2.
+     * @param pt3 punto 3.
      */
-    public Triangle(Point pt1, Point py2, Point py3) {
+    public Triangle(Point pt1, Point pt2, Point pt3) {
         this.point1 = pt1;
-        this.point2 = py2;
-        this.point3 = py3;
+        this.point2 = pt2;
+        this.point3 = pt3;
     }
 
     /**
-     * This constructor is same as define above. 
+     * This constructor is same as define above.
+     */
+    /**
+     * Constructor clon. Recibe un triángulo para crear un triángulo con los
+     * mismos valores.
+     *
+     * @param t triángulo.
      */
     public Triangle(Triangle t) {
         this.point1 = t.point1;
@@ -33,89 +42,105 @@ class Triangle extends TwoDimensionalShape {
     }
 
     /**
-     * It gets the value of point1.
-     * @return the value of point1.
+     * Obtiene el valor del punto 1.
+     *
+     * @return el valor del punto 1.
      */
     public Point getPoint1() {
         return point1;
     }
 
     /**
-     * It sets the value of point1.
+     * Establece el valor del punto 1.
+     *
+     * @param point1 punto 1.
      */
     public void setPoint1(Point point1) {
         this.point1 = point1;
     }
 
     /**
-     * It gets the value of point2.
-     * @return the value of point2.
+     * Obtiene el valor del punto 2.
+     *
+     * @return el valor del punto 2.
      */
     public Point getPoint2() {
         return point2;
     }
 
     /**
-     * It sets the value of point2.
+     * Establece el valor del punto 2.
+     *
+     * @param point2 punto 2.
      */
     public void setPoint2(Point point2) {
         this.point2 = point2;
     }
 
     /**
-     * It gets the value of point3.
-     * @return the value of point3.
+     * Obtiene el valor del punto 3.
+     *
+     * @return el valor del punto 3.
      */
     public Point getPoint3() {
         return point3;
     }
 
     /**
-     * It sets the value of point3.
+     * Establece el valor del punto 3.
+     *
+     * @param point3 punto 3.
      */
     public void setPoint3(Point point3) {
         this.point3 = point3;
     }
 
     /**
-     * This is a printwriteout overridden method which prints the Triangle object.
-     */
-    @Override
-    public void print(PrintWriter out) {
-        super.print(out);
-        out.write("\n Triangle Data => "+ "\r\n");
-        out.write("\n Point 1 = " + this.point1.getX() + " , " + this.point1.getY()+ "\r\n");
-        out.write("\n Point 2 = " + this.point2.getX() + " , " + this.point2.getY()+ "\r\n");
-        out.write("\n Point 3 = " + this.point3.getX() + " , " + this.point3.getY()+ "\r\n");
-        out.write("\n Area = " + this.getArea()+ "\r\n");   
-        out.write("\n Perimeter = " + this.getPerimeter()+ "\r\n");
-        out.write("\n\n\n");;
-    }
-
-    /**
-     * This is an overridden method which gets the area.
+     * Obtiene el valor del área.
+     *
+     * @return el valor del área
      */
     @Override
     public double getArea() {
-        double semiperimeter = this.getPerimeter()/2;
+        double semiperimeter = this.getPerimeter() / 2;
 
         double a = this.point1.getX() + this.point1.getY();
         double b = this.point2.getX() + this.point2.getY();
         double c = this.point3.getX() + this.point3.getY();
 
-        return = Math.sqrt(semiperimeter * (semiperimeter - a) * (semiperimeter - b) * (semiperimeter - c));
+        return Math.sqrt(semiperimeter * (semiperimeter - a) * (semiperimeter - b)
+                * (semiperimeter - c));
     }
 
     /**
-     * This is an overridden method which gets the Perimeter.
+     * Obtiene el valor del perímetro.
+     *
+     * @return el valor del perímetro.
      */
     @Override
     public double getPerimeter() {
-        double sum =  0 ;
-        sum +=  this.point1.getX() + this.point1.getY();
+        double sum = 0;
+        sum += this.point1.getX() + this.point1.getY();
         sum += this.point2.getX() + this.point2.getY();
         sum += this.point3.getX() + this.point3.getY();
-        return sum;  
+        return sum;
+    }
+
+    /**
+     * Imprime los atributos y valores del triángulo. Imprime los atributos y
+     * resultados de los metodos del objeto en un archivo dado como parámetro.
+     *
+     * @param out salida del método.
+     */
+    @Override
+    public void print(PrintWriter out) {
+        out.write("\n Triangle Data => " + "\r\n");
+        out.write("\n Point 1 = " + this.point1.getX() + " , " + this.point1.getY() + "\r\n");
+        out.write("\n Point 2 = " + this.point2.getX() + " , " + this.point2.getY() + "\r\n");
+        out.write("\n Point 3 = " + this.point3.getX() + " , " + this.point3.getY() + "\r\n");
+        out.write("\n Area = " + this.getArea() + "\r\n");
+        out.write("\n Perimeter = " + this.getPerimeter() + "\r\n");
+        out.write("\n\n\n");;
     }
 
 }

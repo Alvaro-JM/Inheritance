@@ -1,89 +1,105 @@
+package pacalcompany.formas_herencia;
+
 import java.io.PrintWriter;
 
 /**
- *  A point class is represented as a pair of Cartesian coordinates.
- *  This class is not a part of Hieraecy but is going to be used by ohter classes.
- *  point x and y coordinates in the system. 
- *  
- * @author  Pratik Patel 
- * @version 1  Date 04/27/2014
+ * Clase para crear un punto. Un punto está representado por sus dos coordenadas
+ * cartesianas (x,y).
+ *
+ * @author Pratik Patel - Álvaro Jiménez
+ * @version 2 Date: 22/03/2021
  */
-class Point {
-    // Instance Variables x and y representing coordinates which are double.
-    private double x ;
+public class Point {
+
+    private double x;
     private double y;
 
     /**
-     * The default constructor which sets the x and the y coordinates. 
+     * Constructor por defecto. Crea un punto en el origen de coordenadas.
      */
     public Point() {
         this.x = 0.0;
-        this.y = 0.0 ;
+        this.y = 0.0;
     }
 
     /**
-     * This is a constructor which takes two doubles and initializes x and the y.
+     * Constructor parametrizado. Crea el punto con las coordenadas recibidas.
+     *
+     * @param x coordenada x.
+     * @param y coordenada y.
      */
     public Point(double x, double y) {
         this.x = x;
         this.y = y;
     }
-    
-     /**
-     * This constructor takes a Point object as parameter.
-     * It creates a new Point object.
+
+    /**
+     * Constructor clon. Recibe un punto para crear un punto con las mismas
+     * coordenadas.
+     *
+     * @param pnt punto.
      */
     public Point(Point pnt) {
         this.x = pnt.x;
         this.y = pnt.y;
     }
-    
-     /**
-     * It gets a value of x. 
-     * @return the value of y.
+
+    /**
+     * Obtiene el valor de la coordenada x.
+     *
+     * @return el valor de la coordenada x.
      */
     public double getX() {
         return x;
     }
-    
-     /**
-     * Sets a value of x.
+
+    /**
+     * Establece el valor de la coordenada x.
+     *
+     * @param x coordenada x.
      */
     public void setX(double x) {
         this.x = x;
     }
-    
+
     /**
-     * It gets a value of y. 
-     * @return the value of y.
+     * Obtiene el valor de la coordenada y.
+     *
+     * @return el valor de la coordenada y.
      */
     public double getY() {
         return y;
     }
-    
-     /**
-     * Sets a value of y.
+
+    /**
+     * Establece el valor de la coordenada y.
+     *
+     * @param y coordenada y.
      */
     public void setY(double y) {
         this.y = y;
     }
-    
+
     /**
-     * This is a distance method which returns the distance between this Point and another point.
-     * it takes point object as its parameter.
-     * through the parameter it calculate the length of line.
+     * Obtiene la distancia entre este punto y otro punto dado como parámetro.
+     *
+     * @param p punto.
+     * @return distancia al punto.
      */
     public double distance(Point p) {
         return Math.sqrt(Math.pow(this.x - p.x, 2) + Math.pow(this.y - p.y, 2));
     }
-    
+
     /**
-     * This is PrintWriter out method whic prints the point in the x and the y to output file.
+     * Imprime los atributos y valores del punto. Imprime los atributos del
+     * objeto en un archivo dado como parámetro.
+     *
+     * @param out salida del método.
      */
     public void print(PrintWriter out) {
         out.write("\n Point Data => ");
         out.write("\nPrint Data = x = " + x + " y = " + y);
         out.write("\n\n\n");;
     }
-    
+
 }

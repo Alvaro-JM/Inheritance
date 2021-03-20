@@ -1,21 +1,24 @@
+package pacalcompany.formas_herencia;
+
 import java.io.PrintWriter;
 
 /**
- * This is a Cylinder class which is a ThreeDimensionalShape.
- * it is represented by its radius and height.
- * 
- * @author Pratik Patel
- * @version 1 Date: 04/27/2014
+ * Clase para figura cilindro. Clase para crear figura cilindro a partir del
+ * radio de las bases y de la altura del cilindro.
+ *
+ * @author Pratik Patel - Álvaro Jiménez.
+ * @version 2 Date: 22/03/2021
  */
-class Cylinder extends ThreeDimensionalShape{
-    //instance variable radius and height 
-    double radius , height;
+public class Cylinder extends ThreeDimensionalShape {
 
-    public Cylinder() {
-    }
+    double radius, height;
 
     /**
-     * This is a default constructor which takes radius and height. 
+     * Constructor parametrizado. Recibe un radio y una altura para crear un
+     * cilindro.
+     *
+     * @param radius radio de la base.
+     * @param height altura del cilindro.
      */
     public Cylinder(double radius, double height) {
         this.radius = radius;
@@ -23,7 +26,10 @@ class Cylinder extends ThreeDimensionalShape{
     }
 
     /**
-     * This constructor is also carries radius and height.
+     * Constructor clon. Recibe un cilindro para crear un cilindro con los
+     * mismos valores.
+     *
+     * @param cyl cilindro.
      */
     public Cylinder(Cylinder cyl) {
         this.radius = cyl.radius;
@@ -31,64 +37,79 @@ class Cylinder extends ThreeDimensionalShape{
     }
 
     /**
-     * It gets the value of radius.
-     * @return the value of radius.
+     * Obtiene el valor del radio de la base.
+     *
+     * @return el valor del radio de la base.
      */
     public double getRadius() {
         return radius;
     }
 
     /**
-     * It sets the value of height.
+     * Establece el valor del radio de las bases.
+     *
+     * @param radius radio de las bases.
      */
     public void setRadius(double radius) {
         this.radius = radius;
     }
 
     /**
-     * It gets the value of height.
-     * @return the value of height.
+     * Obtiene el valor de la altura.
+     *
+     * @return el valor de la altura.
      */
     public double getHeight() {
         return height;
     }
 
     /**
-     * It sets the value of height.
+     * Establece el valor de la altura.
+     *
+     * @param height el valor de la altura.
      */
     public void setHeight(double height) {
         this.height = height;
     }
 
     /**
-     * This is an overridden method which gets the surface area.
+     * Obtiene el valor del área superficial.
+     *
+     * @return el valor del área superficial.
      */
     @Override
     public double getSurfaceArea() {
+        //Obtenemos el área de una base
         double baseArea = Math.PI * Math.pow(this.radius, 2);
+        //Obtenemos el área lateral
         double lateralArea = 2 * Math.PI * this.radius * this.height;
+        //el área total son dos bases más el área lateral
         return (2 * baseArea) + lateralArea;
     }
 
     /**
-     * This is an overridden method which gets the volume.
+     * Obtiene el valor del volumen.
+     *
+     * @return el valor del volumen.
      */
     @Override
     public double getVolume() {
-        return  Math.PI * Math.pow(this.radius, 2) * this.height;
+        return Math.PI * Math.pow(this.radius, 2) * this.height;
     }
 
     /**
-     * This is a printwriteout overridden method which prints the Cylinder object.
+     * Imprime los atributos y valores del cilindro. Imprime los atributos y
+     * resultados de los metodos del objeto en un archivo dado como parámetro.
+     *
+     * @param out salida del método.
      */
     @Override
     public void print(PrintWriter out) {
-        super.print(out);
-        out.write("\n Radius = " + this.getRadius()+ "\r\n");
-        out.write("\n Height = " + this.getHeight()+ "\r\n");
-        out.write("\n Surface  Area = " + this.getSurfaceArea()+ "\r\n");;
-        out.write("\n Volume = " + this.getVolume()+ "\r\n");
-        out.write("\n\n\n");  
+        out.write("\n Radius = " + this.getRadius() + "\r\n");
+        out.write("\n Height = " + this.getHeight() + "\r\n");
+        out.write("\n Surface  Area = " + this.getSurfaceArea() + "\r\n");;
+        out.write("\n Volume = " + this.getVolume() + "\r\n");
+        out.write("\n\n\n");
     }
-    
+
 }

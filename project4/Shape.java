@@ -1,12 +1,21 @@
+package pacalcompany.formas_herencia;
+
 import java.io.PrintWriter;
 
 /**
- * This Shape class represent area and perimeter.
- * @author Pratik Patel
- * @version 1  Date: 04/27/2014
+ * Clase abstracta figura. Es la clase padre de la que heredan las demás.
+ *
+ * @author Pratik Patel - Álvaro Jiménez
+ * @version 2 Date: 22/03/2021
  */
-abstract class Shape {
+public abstract class Shape {
     
-   abstract public void print(PrintWriter out);
-   
+    /**
+     * Imprime los atributos y valores de la figura. Imprime los atributos y
+     * resultados de los metodos del objeto en un archivo dado como parámetro.
+     *
+     * @param out salida del método.
+     */
+    abstract public void print(PrintWriter out);
+
 }
