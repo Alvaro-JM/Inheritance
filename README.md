@@ -31,6 +31,9 @@ La clase **Point** (Punto) no forma parte de la propia jerarquía. Se trata de u
 La clase principal **ShapeApp** nos muestra un ejemplo de cómo se crean los objetos, cómo hace uso de los métodos de cada uno de ellos y cómo imprime los resusltados en un archivo.
 Para que funcione correctamente debemos darle un archivo como argumento al main en el momento de ejecutarlo. 
 En caso de querer modificar los atributos de los objetos, o bien la salida, se deberá hacer modificando el código de ShapeApp a través de un editor de texto o de un IDE.
+  
+  
+---  
 
 
 ## Descargar y Ejecutar
@@ -67,4 +70,4 @@ Con esto se generará el archivo `archivo.txt` en la carpeta del proyecto, y pod
 
 ---
 
-El proyecto ha sido creado a partir de las clases obtenidas por Pratik Patel en [project4](https://github.com/gati3363/inheritance) y modificadas sustancialmente por mi. 
+Este proyecto ha sido creado a partir de las clases obtenidas por Pratik Patel en [inheritance](https://github.com/gati3363/inheritance) a las que se les han realizado diversos cambios. 
