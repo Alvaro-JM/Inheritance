@@ -21,7 +21,7 @@ De *TwoDimensionalShape* heredan **Circle** (Círculo), **Triangle** (Triángulo
 De *ThreeDimensionalShape* heredan **Sphere** (Esfera), **Cube** (Cubo), **Cone** (Cono), y **Cylinder** y ocurre exactamente lo mismo, de las clases superiores heredan 3 métodos (imprimir objeto, obtener área superficial y obtener volumen) e implementan sus propios métodos cada una. 
 
 ---
-La clase **Point** (Punto) no forma parte de la propia jerarquía. Se trata de un objeto que necesitan las clases Circle y Triangle par aformarse. El círculo necesita un punto central y el triángulo necesita de tres puntos.  
+La clase **Point** (Punto) no forma parte de la propia jerarquía. Se trata de un objeto que necesitan las clases Circle y Triangle para formarse. El círculo necesita un punto central y el triángulo necesita de tres puntos.  
 
 ---
 
