@@ -65,3 +65,7 @@ java ShapeApp archivo.txt
 ~~~
 Con esto se generará el archivo `archivo.txt` en la carpeta del proyecto, y podemos observar todo lo que se ha imprimido.
 
+---
+
+El proyecto ha sido creado a partir de las clases obtenidas por Pratik Patel en [project4]
+[project4]: https://github.com/gati3363/inheritance
