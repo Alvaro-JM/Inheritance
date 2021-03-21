@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author Pratik Patel - Álvaro Jiménez
  * @version 2 Date: 22/03/2021
  */
-public class Project4 {
+public class ShapApp {
 
     /**
      * Main. Recibe como argumento el archivo dónde se imprimirá la salida.
