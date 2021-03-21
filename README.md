@@ -67,5 +67,5 @@ Con esto se generará el archivo `archivo.txt` en la carpeta del proyecto, y pod
 
 ---
 
-El proyecto ha sido creado a partir de las clases obtenidas por Pratik Patel en [project4]
-[project4]: https://github.com/gati3363/inheritance
+El proyecto ha sido creado a partir de las clases obtenidas por Pratik Patel en [project4] y modificadas por mi. 
+[project4](project4): https://github.com/gati3363/inheritance
