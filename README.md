@@ -3,9 +3,12 @@ Proyecto para entender de forma sencilla la herencia en programación.
 Nos muestra de manera simple y con objetos fáciles de visualizar cómo funciona la herencia. 
 Concretamente este proyecto está realizado en JAVA pero se puede extrapolar a más lenguajes, la herencia simple no es exclusiva de Java.  
 
-### Jerarquía
+## Jerarquía
 
 Para la jerarquía de clases y la herencia usa **formas geométricas**.  
+
+---
+
 Toda figura hereda de la clase **Shape** (Figura). El primer paso en la herencia es dividirla entre **TwoDimensionalShape** (Figuras de dos dimensiones) y **ThreeDimensionalShape**  y (Figuras de tres dimensiones). 
 Estas tres clases son abstractas, haciendo que las figuras que heredan de las mismas sobreescriban los métodos básicos que tienen. 
 
@@ -16,6 +19,12 @@ De *TwoDimensionalShape* heredan **Circle** (Círculo), **Triangle** (Triángulo
 ---
 
 De *ThreeDimensionalShape* heredan **Sphere** (Esfera), **Cube** (Cubo), **Cone** (Cono), y **Cylinder** y ocurre exactamente lo mismo, de las clases superiores heredan 3 métodos (imprimir objeto, obtener área superficial y obtener volumen) e implementan sus propios métodos cada una. 
+
+---
+La clase **Point** (Punto) no forma parte de la propia jerarquía. Se trata de un objeto que necesitan las clases Circle y Triangle par aformarse. El círculo necesita un punto central y el triángulo necesita de tres puntos.  
+
+---
+
 ![](/pics/jerarquia.png)
 
 ### Aplicación
@@ -23,7 +32,8 @@ La clase principal **ShapeApp** nos muestra un ejemplo de cómo se crean los obj
 Para que funcione correctamente debemos darle un archivo como argumento al main en el momento de ejecutarlo. 
 En caso de querer modificar los atributos de los objetos, o bien la salida, se deberá hacer modificando el código de ShapeApp a través de un editor de texto o de un IDE.
 
-### Descargar
+
+## Descargar y Ejecutar
 Para descargar la aplicación pinchar en el botón **Code** del proyecto y **Download Zip**  
 
 ![](/pics/descarga.png)  
