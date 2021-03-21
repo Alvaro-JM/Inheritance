@@ -24,8 +24,10 @@ Para que funcione correctamente debemos darle un archivo como argumento al main 
 En caso de querer modificar los atributos de los objetos, o bien la salida, se deberá hacer modificando el código de ShapeApp a través de un editor de texto o de un IDE.
 
 ### Descargar
-Para descargar la aplicación pinchar en el botón **Code** del proyecto y **Download Zip**
-![](/pics/descarga.png)
+Para descargar la aplicación pinchar en el botón **Code** del proyecto y **Download Zip**  
+
+![](/pics/descarga.png)  
+
 Una vez descargado se pueden eliminar todos los archivos de documentación e imágenes. Es decir, los únicos archivos que harán falta para ejecutar la aplicación son aquellos que están en la carpeta **Classes**.
 
 ### Compilar
