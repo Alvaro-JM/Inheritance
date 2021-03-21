@@ -66,7 +66,7 @@ Una vez compilados los archivos ya podemos ejecutarlo. Debemos recordar que este
 ~~~
 java ShapeApp archivo.txt
 ~~~
-Con esto se generará el archivo `archivo.txt` en la carpeta del proyecto, y podemos observar todo lo que se ha imprimido.
+Con esto se generará el archivo `archivo.txt` en la carpeta del proyecto, y en él podemos observar todo lo que se ha imprimido.
 
 ---
 
